@@ -62,7 +62,14 @@ pip3 install ansible
 ```bash
 ansible --version
 ```
-
+## If you want to deactivate the virtual environment 
+```
+deactivate
+```
+## Check the ansible exist or not in their 
+```
+ansible --version
+```
 ---
 
 ✅ **Ansible installation completed successfully inside a virtual environment.**
