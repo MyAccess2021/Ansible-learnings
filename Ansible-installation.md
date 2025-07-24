@@ -87,26 +87,15 @@ Expected Output
 Command 'ansible' not found, but can be installed with:
 sudo apt install ansible-core
 ```
-## Now create a config file
+
+## Create the configuration file and bind it
 ```
-touch /tmp/ansible.cnf
+touch ./ansible.cfg
 ```
-## Then Export the Main Configuration file
-```
-export ANSIBLE_CONFIG=/tmp/ansible.cfg
-```
-## Check it if it is exported or not 
-```
-echo $ANSIBLE_CONFIG
-```
-## Then check the config file is connected or not 
-```
-ansible --version
-```
-Expected output
+Expected output 
 ```
 ansible [core 2.18.7]
-  config file = /tmp/ansible.cfg
+  config file = /home/ubuntu/ansible/ansible.cfg
   configured module search path = ['/home/ubuntu/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
   ansible python module location = /home/ubuntu/ansible/myansible/lib/python3.12/site-packages/ansible
   ansible collection location = /home/ubuntu/.ansible/collections:/usr/share/ansible/collections
@@ -115,6 +104,7 @@ ansible [core 2.18.7]
   jinja version = 3.1.6
   libyaml = True
 ```
+
 ---
 
 ✅ **Ansible installation completed successfully inside a virtual environment.**
