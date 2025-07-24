@@ -62,6 +62,18 @@ pip3 install ansible
 ```bash
 ansible --version
 ```
+Expected Output
+```
+ansible [core 2.18.7]
+  config file = None
+  configured module search path = ['/home/ubuntu/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/ubuntu/ansible/myansible/lib/python3.12/site-packages/ansible
+  ansible collection location = /home/ubuntu/.ansible/collections:/usr/share/ansible/collections
+  executable location = /home/ubuntu/ansible/myansible/bin/ansible
+  python version = 3.12.3 (main, Jun 18 2025, 17:59:45) [GCC 13.3.0] (/home/ubuntu/ansible/myansible/bin/python)
+  jinja version = 3.1.6
+  libyaml = True
+```
 ## If you want to deactivate the virtual environment 
 ```
 deactivate
@@ -69,6 +81,39 @@ deactivate
 ## Check the ansible exist or not in their 
 ```
 ansible --version
+```
+Expected Output
+```
+Command 'ansible' not found, but can be installed with:
+sudo apt install ansible-core
+```
+## Now create a config file
+```
+touch /tmp/ansible.cnf
+```
+## Then Export the Main Configuration file
+```
+export ANSIBLE_CONFIG=/tmp/ansible.cfg
+```
+## Check it if it is exported or not 
+```
+echo $ANSIBLE_CONFIG
+```
+## Then check the config file is connected or not 
+```
+ansible --version
+```
+Expected output
+```
+ansible [core 2.18.7]
+  config file = /tmp/ansible.cfg
+  configured module search path = ['/home/ubuntu/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/ubuntu/ansible/myansible/lib/python3.12/site-packages/ansible
+  ansible collection location = /home/ubuntu/.ansible/collections:/usr/share/ansible/collections
+  executable location = /home/ubuntu/ansible/myansible/bin/ansible
+  python version = 3.12.3 (main, Jun 18 2025, 17:59:45) [GCC 13.3.0] (/home/ubuntu/ansible/myansible/bin/python)
+  jinja version = 3.1.6
+  libyaml = True
 ```
 ---
 
